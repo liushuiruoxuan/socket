@@ -1,0 +1,25 @@
+spring:
+  datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:13306/you_db?autoReconnect=true&autoReconnectForPools=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+        username: root
+        password: 123456
+        initialSize: 5 #初始化大小
+        maxActive: 15 #最大
+        minIdle: 5 #最小
+        maxWait: 6000 #配置获取连接等待超时的时间
+        timeBetweenEvictionRunsMillis: 60000 #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        minEvictableIdleTimeMillis: 300000 #配置一个连接在池中最小生存的时间，单位是毫秒
+        validationQuery: select 1 from dual
+        testWhileIdle: true
+        testOnBorrow: true
+        testOnReturn: false
+        poolPreparedStatements: true #打开PSCache，并且指定每个连接上PSCache的大小
+        maxPoolPreparedStatementPerConnectionSize: 20
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=30000;druid.stat.logSlowSql=true #慢SQL记录
+        useGlobalDataSourceStat: true
+        keepAlive: true
+        removeAbandoned: true #超过时间限制是否回收
+        removeAbandonedTimeout: 300 #超时时间；单位为秒
+        logAbandoned: false #关闭abanded连接时输出错误日志
+        type: com.alibaba.druid.pool.DruidDataSource

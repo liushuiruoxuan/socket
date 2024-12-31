@@ -1,0 +1,24 @@
+2024-12-31 14:21:43.628 [main] INFO  com.xt.tcp.TCPServerApplicationTests - Starting TCPServerApplicationTests using Java 17.0.12 on DESKTOP-0T1TED2 with PID 21264 (started by hongxuanchai in E:\GitHub\socket)
+2024-12-31 14:21:43.630 [main] INFO  com.xt.tcp.TCPServerApplicationTests - The following 1 profile is active: "dev"
+2024-12-31 14:21:44.406 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.xt]' package. Please check your configuration.
+2024-12-31 14:21:44.722 [main] INFO  com.xt.tcp.ServerTask - TCP 服务器已经启动...
+2024-12-31 14:25:47.456 [main] INFO  com.xt.TCPServerApplication - Starting TCPServerApplication using Java 17.0.12 on DESKTOP-0T1TED2 with PID 15900 (E:\GitHub\socket\target\classes started by hongxuanchai in E:\GitHub\socket)
+2024-12-31 14:25:47.461 [main] INFO  com.xt.TCPServerApplication - The following 1 profile is active: "dev"
+2024-12-31 14:25:48.121 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.xt]' package. Please check your configuration.
+2024-12-31 14:25:48.691 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+2024-12-31 14:25:48.692 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+2024-12-31 14:25:48.693 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-12-31 14:25:48.693 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-12-31 14:25:48.697 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+2024-12-31 14:25:48.710 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2024-12-31 14:25:48.710 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-31 14:25:48.711 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-31 14:25:48.832 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-31 14:25:48.832 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1308 ms
+2024-12-31 14:25:48.910 [main] INFO  com.xt.tcp.ServerTask - TCP 服务器已经启动...
+2024-12-31 14:25:57.519 [main] INFO  com.xt.tcp.ServerTask - Task_Service_Async_有人上线了/127.0.0.1:52834
+2024-12-31 14:25:57.523 [main] INFO  com.xt.tcp.ServerTask - 上线设备数量:1
+2024-12-31 14:25:59.924 [Task_Service_Async_1] INFO  com.xt.tcp.TCPServerThread - 转发的客户端数量:1,转发消息:111
+2024-12-31 14:26:00.942 [Task_Service_Async_1] INFO  com.xt.tcp.TCPServerThread - 转发的客户端数量:1,转发消息:222
+2024-12-31 14:26:01.873 [Task_Service_Async_1] INFO  com.xt.tcp.TCPServerThread - 转发的客户端数量:1,转发消息:33
+2024-12-31 14:26:04.117 [Task_Service_Async_1] INFO  com.xt.tcp.TCPServerThread - 有人下线了/127.0.0.1:52834

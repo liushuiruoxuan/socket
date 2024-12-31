@@ -1,0 +1,19 @@
+server:
+  port: 8091
+logging:
+  file:
+    path: ./log
+  level:
+    com.lucifer.tower: debug
+  config: classpath:logback-spring.xml
+spring:
+  profiles:
+    active: dev
+# MyBatis
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: com.xt.**.entity
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
