@@ -22,9 +22,9 @@ public class ScatteringAndGatheringTest {
         serverSocketChannel.socket().bind(inetSocketAddress);
 
         // 创建buffer 数组
-        ByteBuffer[] byteBuffer = new ByteBuffer[2];
-        byteBuffer[0] = ByteBuffer.allocate(5);
-        byteBuffer[1] = ByteBuffer.allocate(3);
+        ByteBuffer[] byteBuffers = new ByteBuffer[2];
+        byteBuffers[0] = ByteBuffer.allocate(5);
+        byteBuffers[1] = ByteBuffer.allocate(3);
 
         // 等待客户端连接（telnet）
         SocketChannel socketChannel = serverSocketChannel.accept();
@@ -32,21 +32,21 @@ public class ScatteringAndGatheringTest {
         while (true) {
             int byteRead = 0;
             while (byteRead < messageLength) {
-                long l = socketChannel.read(byteBuffer);
+                long l = socketChannel.read(byteBuffers);
                 byteRead += l; // 累计读取的字节数
                 System.out.println("byteRead=" + byteRead);
                 // 使用流遍历所有buffer
-                Arrays.asList(byteBuffer).stream().map(buffer -> "position" + buffer.position() + ",limit=" + buffer.limit()).forEach(System.out::println);
+                Arrays.asList(byteBuffers).stream().map(buffer -> "position" + buffer.position() + ",limit=" + buffer.limit()).forEach(System.out::println);
             }
             // 读完一个buffer，切换到下一个
-            Arrays.asList(byteBuffer).forEach(buffer -> buffer.flip());
+            Arrays.asList(byteBuffers).forEach(buffer -> buffer.flip());
             // 将数据读出显示到客户端
             long byteWrite = 0;
             while (byteWrite < messageLength) {
-                long l = socketChannel.write(byteBuffer);
+                long l = socketChannel.write(byteBuffers);
                 byteWrite += l;
             }
-            Arrays.asList(byteBuffer).forEach(buffer -> buffer.clear());
+            Arrays.asList(byteBuffers).forEach(buffer -> buffer.clear());
             System.out.println("byteRead=" + byteRead + ",byteWrite=" + byteWrite + ",messageLength=" + messageLength);
         }
     }
